@@ -7,7 +7,7 @@ import pl.hydromax.usbdevice.USBDevice;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Computer {;
+public class Computer {
     private Monitor monitor;
     private Drive drive;
     private Headphones headphones;
