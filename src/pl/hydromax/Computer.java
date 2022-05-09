@@ -13,7 +13,7 @@ public class Computer {;
     private Headphones headphones;
 
 
-    List<USBDevice> usbDevices = new ArrayList<>();
+    private List<USBDevice> usbDevices = new ArrayList<>();
 
     public Computer(Monitor monitor, Drive drive) {
         this.monitor = monitor;
@@ -59,9 +59,9 @@ public class Computer {;
     public void removeUSBDevice(USBDevice usbDevice){
         boolean isDisconnected = usbDevice.disconnect();
 
-        if(!isDisconnected){
-            System.out.println("Forcibly removed USB Device");
+        if(isDisconnected){
+            usbDevices.remove(usbDevice);
         }
-        usbDevices.remove(usbDevice);
+
     }
 }
